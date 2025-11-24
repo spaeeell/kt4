@@ -5,7 +5,7 @@ body {
     background-image: url("image.svg");
     background-repeat: no-repeat;
     background-position: center;
-    margin: 100px;
+    margin: 0;
 }
 
 .wrap {
@@ -17,6 +17,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
+    margin-top: 125px;
   }
   
   .card {
@@ -24,7 +25,6 @@ body {
     border: 2px solid #5fb1bd;
     border-radius: 12px 1px;
     padding: 26px 22px;
-    position: relative;
     box-shadow: 0 2px 0 rgba(0,0,0,0.04);
     min-height: 160px;
     overflow: hidden;
@@ -48,19 +48,6 @@ body {
     font-size: 14px;
     line-height: 1.6;
   }
-  
-  .card::before {
-    content: "";
-    position: absolute;
-    left: 12px;
-    top: 12px;
-    width: 12px;
-    height: 12px;
-    background: transparent;
-    border-radius: 6px;
-    box-shadow: 0 0 0 6px #fff;
-    pointer-events: none;
-  }
 
   @media (max-width: 640px) {
     .cards { grid-template-columns: 1fr; }
@@ -68,31 +55,29 @@ body {
     .card .num { font-size: 36px; }
   }
 
-.topbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 50px; 
-    background: #fff;
-    border-bottom: 1px solid #e6e6e6;
-    display: flex;
-    align-items: center;
-    z-index: 1000;
+  .line{
+    margin-top: 100px;
+    background-color: rgb(61, 61, 61);
+    height: 150px;
   }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .text-line{
+    color: #fff;
+    text-align: center;
+    font-style: normal;
+    padding-top: 40px;
+    font-size: 12px;
+    font-family: "Calibri Light";
   }
-  
+  .top-line{
+    background-color: #fff;
+    height: 35px;
+  }
+
   .logo {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Calibri Light";
     font-size: 25px;
     color: #b7b7b7;
+    margin-left: 250px;
+    font-weight: 900;
   }
