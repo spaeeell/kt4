@@ -14,22 +14,24 @@ body {
   }
   
   .cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 125px;
+}
+  
+
+    .card {
+      width: calc(50% - 10px);
+      margin-bottom: 24px;
+      background: #fff;
+      border: 2px solid #5fb1bd;
+      border-radius: 12px 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 0 rgba(0,0,0,0.04);
+      min-height: 160px;
   }
   
-  .card {
-    background: #fff;
-    border: 2px solid #5fb1bd;
-    border-radius: 12px 1px;
-    padding: 26px 22px;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.04);
-    min-height: 160px;
-    overflow: hidden;
-    width: 250;
-  }
   
   .card .num {
     font-family: "Montserrat", sans-serif;
@@ -50,10 +52,17 @@ body {
   }
 
   @media (max-width: 640px) {
-    .cards { grid-template-columns: 1fr; }
-    .card { padding: 20px; }
-    .card .num { font-size: 36px; }
-  }
+    .cards { 
+        flex-direction: column;
+    }
+    .card { 
+        width: 100%;
+        padding: 20px;
+    }
+    .card .num { 
+        font-size: 36px; 
+    }
+}
 
   .line{
     margin-top: 100px;
